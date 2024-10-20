@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-image: url('img_contact/img_contact3_copy.jpg');
+    background-image: url('contact_image2/img_contact3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,26 +28,31 @@
 }
 .meduim{
     height: 100%;
-    /* width: 100%; */
-    width: auto;
-    display: flex; 
+    width: 100%;
+    /* display: flex; 
     justify-content: space-between ;
-    flex-direction: row;
+    flex-direction: row; */
     margin-top: 60px;
     margin-left: 30px;
-    margin-right: 30px;
+    /* margin-right: 30px; */
 }
 .meduim .map{
-    width: 46%;
+    width: 100%;
+}
+.meduim .class_2 h2,
+.meduim .class_3 h2{
+    font-size: 30px;
+    font-family:'Segoe UI';
+}
+.meduim .class_3 h3{
+    font-size: 20px;
 }
 .meduim .login{
     border: none;
     padding: 30px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.127);
-    width: 50%;
-    /* margin-right: 20px; */
-    padding-left: 20px;
-    /* padding-right: 20px; */
+    width: 100%;
+    /* padding-left: 20px; */
 }
 .class_1 {
     width: 100%;
@@ -74,6 +79,9 @@
     height: 55px;
     font-size: 16px;
     padding: 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.127);
+    border: none;
+    outline: none;
 }
 .login input.msg{
     position: relative;
@@ -82,11 +90,7 @@
 .info{
     padding-bottom: 10px;
 }
-.info input{
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.127);
-    border: none;
-    outline: none;
-}
+
 .login .send button{
     color: white;
     background-color: rgb(109, 113, 118);
@@ -102,6 +106,38 @@
         display:flex;
         flex-direction: column-reverse;
         justify-content: space-between;
+}
+.meduim{
+    display:grid;
+    grid-gap : 10px;
+    grid-row-gap : 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .class_2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        align-content: center;
+    }
+    .login{
+        grid-column-start: 3;
+        grid-column-end: 6;
+    }
+    .map{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .class_3{
+        grid-column-start: 4;
+        grid-column-end: 6;
+        align-content: center;
+    }
+}
+
+/* @media (max-width: 1024px) {
+    .meduim{
+        display:flex;
+        /* flex-direction: column-reverse; */
+    /*    justify-content: space-between;
         align-items: center;
     }
     .meduim .map{
@@ -114,6 +150,9 @@
     }
 }
 @media (max-width: 425px){
+    .contact .header_contact h1{
+        font-size: 30px;
+    }
     .meduim{
         margin: 0;
     }
@@ -140,4 +179,3 @@
         height: 300px;
         padding: 10px;
     }
-}
